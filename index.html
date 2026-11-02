@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlightSearch - Booking</title>
+    <!-- CSS dosyasınıı buraya bağlıyoruz. -->
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ÜST MENÜ --> 
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="FlightSearch Logo">
+            <h1>FlightSearch</h1>
+        </div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Flight Tickets</a></li>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">Bus Tickets</a></li>
+                <li><a href="#">Car Rental</a></li>
+                <li><a href="#">Transfers</a></li>
+                <li><a href="#">Campaigns</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+
+        <div class="auth-buttons">
+            <button class="login-btn">Log In</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+    </header>
+    <!-- ANA İÇERİK BAŞLANGICI -->
+    <main>
+        <!-- Uçuş Arama -->
+        <section class="search-section">
+            <form class="search-form">
+                
+                <!-- Uçuş Tipi -->
+                <div class="flight-type">
+                    <label><input type="radio" name="trip" checked> One Way</label>
+                    <label><input type="radio" name="trip"> Round Trip</label>
+                    <label><input type="radio" name="trip"> Multi-City</label>
+                    
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Non-stop flights only
+                    </label>
+                </div>
+
+                <!-- input Alanları -->
+                <div class="flight-inputs">
+                    <div class="input-group">
+                        <label>From</label>
+                        <input type="text" placeholder="Istanbul (IST)">
+                    </div>
+                    <div class="input-group">
+                        <label>To</label>
+                        <input type="text" placeholder="Antalya (AYT)">
+                    </div>
+                    <div class="input-group">
+                        <label>Departure Date</label>
+                        <input type="date">
+                    </div>
+                    <div class="input-group">
+                        <label>Return Date</label>
+                        <input type="date">
+                    </div>
+                    <div class="input-group">
+                        <label>Passengers</label>
+                        <select>
+                            <option>1 Passenger</option>
+                            <option>2 Passengers</option>
+                            <option>3 Passengers</option>
+                            <option>4 Passengers</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Cabin Class</label>
+                        <select>
+                            <option>Economy</option>
+                            <option>Business</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Arama Butonu -->
+                <button type="button" class="search-btn">SEARCH FLIGHTS</button>
+            </form>
+        </section>
+        <!-- Popüler Uçuşlar -->
+        <section class="popular-flights">
+            <h2>Popular Flights</h2>
+            
+            <div class="flights-grid">
+                <!-- Kart 1 -->
+                <article class="flight-card">
+                    <h3 class="route">Istanbul <span>✈</span> Lefkosa</h3>
+                    <p class="duration">1h 30m</p>
+                    <p class="price">€30</p>
+                    <button class="view-btn">View Flight</button>
+                </article>
+
+                <!-- Kart 2 -->
+                <article class="flight-card">
+                    <h3 class="route">Lefkosa <span>✈</span> Izmir</h3>
+                    <p class="duration">1h </p>
+                    <p class="price">€35</p>
+                    <button class="view-btn">View Flight</button>
+                </article>
+
+                <!-- Kart 3 -->
+                <article class="flight-card">
+                    <h3 class="route">Karaman <span>✈</span> Istanbul</h3>
+                    <p class="duration">1h 05m</p>
+                    <p class="price">€38</p>
+                    <button class="view-btn">View Flight</button>
+                </article>
+
+                <!-- Kart 4 -->
+                <article class="flight-card">
+                    <h3 class="route">Bodrum <span>✈</span> Barcelona</h3>
+                    <p class="duration">4h 15m</p>
+                    <p class="price">€90</p>
+                    <button class="view-btn">View Flight</button>
+                </article>
+
+                <!-- Kart 5 -->
+                <article class="flight-card">
+                    <h3 class="route">Dalaman <span>✈</span>Rize</h3>
+                    <p class="duration">1h 15m</p>
+                    <p class="price">€25</p>
+                    <button class="view-btn">View Flight</button>
+                </article>
+
+                <!-- Kart 6 -->
+                <article class="flight-card">
+                    <h3 class="route">Adana <span>✈</span> Ankara</h3>
+                    <p class="duration">1h 10m</p>
+                    <p class="price">€39</p>
+                    <button class="view-btn">View Flight</button>
+                </article>
+            </div>
+        </section>
+        <!-- Kampanyalar Bölümü -->
+        <section class="campaigns-section">
+            <h2>Special Offers & Campaigns</h2>
+            
+            <div class="campaigns-grid">
+                
+                <!-- Kampanya 1: Öğrenci İndirimi -->
+                <article class="campaign-card">
+                    <img src="images/campaign1.jpg.png" alt="Student Offers">
+                    <div class="campaign-content">
+                        <h3>Student Offers</h3>
+                        <p>Special flight deals for students. Fly to your school or home with discounted tickets and extra baggage allowance!</p>
+                        <button class="explore-btn">Explore Offer</button>
+                    </div>
+                </article>
+
+                <!-- Kampanya 2: Doğum Günü (+1 Kişi) -->
+                <article class="campaign-card">
+                    <img src="images/campaign2.jpg.jpg" alt="Birthday Special">
+                    <div class="campaign-content">
+                        <h3>Birthday Special (+1 Companion)</h3>
+                        <p>Celebrate your birthday in the clouds! Enjoy a discount for yourself and a special rate for a loved one.</p>
+                        <button class="explore-btn">Explore Offer</button>
+                    </div>
+                </article>
+
+                <!-- Kampanya 3: Sadakat (10 Uçuş) -->
+                <article class="campaign-card">
+                    <img src="images/campaign3.jpg.jpg" alt="Frequent Flyer">
+                    <div class="campaign-content">
+                        <h3>Frequent Flyer Reward</h3>
+                        <p>Flew 10 times in the last 6 months? Enjoy an exclusive discount on your next booking as a thank you.</p>
+                        <button class="explore-btn">Explore Offer</button>
+                    </div>
+                </article>
+
+</div>
+        </section> <!-- KAMPANYALAR BÖLÜMÜ KAPANISI  -->
+
+        <section class="features-section">
+            <h2>Why Choose Us?</h2>
+            
+            <div class="features-grid"> <!-- KUTULARI YAN YANA DİZEN YAPI (Eksikti) -->
+                
+                <!-- Özellik 1: Uygun Fiyatlar -->
+                <div class="feature-box">
+                    <div class="icon">🏷️</div>
+                    <h3>Affordable Prices</h3>
+                    <p>We provide the most competitive rates and exclusive deals, ensuring you travel more while spending less.</p>
+                </div>
+
+                <!-- Özellik 2: Hızlı İletişim & Anında İşlem -->
+                <div class="feature-box">
+                    <div class="icon">⚡</div>
+                    <h3>Hassle-Free Changes</h3>
+                    <p>Experience ultra-fast support. Cancel, refund, or reschedule your bookings instantly with zero stress.</p>
+                </div>
+
+                <!-- Özellik 3: Booking AI (Yapay Zeka) -->
+                <div class="feature-box">
+                    <div class="icon">🤖</div>
+                    <h3>Smart Booking AI</h3>
+                    <p>Our AI scans the cheapest flights, hotels, and car rentals simultaneously to find the best all-in-one trip package for you.</p>
+                </div>
+                
+            </div> <!-- FEATURES-GRID KAPANISI -->
+        </section> <!-- NEDEN BİZİ SEÇMELİSİNİZ BÖLÜMÜ KAPANISI -->
+    </main>
